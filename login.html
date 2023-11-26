@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BharatAir</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          if (sessionStorage.getItem("email") != null) {
+            let registera = document.getElementById("registera");
+            registera.innerText = localStorage.getItem("email");
+            document.getElementsByClassName("loginBtn")[0].onclick = function () {
+              sessionStorage.removeItem("email");
+              sessionStorage.removeItem("password");
+              
+              location.reload();
+            };
+              document.getElementsByClassName("loginBtn")[0].innerHTML = "Logout";
+              document.getElementsByClassName("loginBtn")[0].style.cursor = "pointer";
+          }
+        },
+        false
+      );
+    </script>
+    <script>
+       $(document).ready(()=>{
+        $("#loginBtn2").click(()=>{
+          let realEmail = localStorage.getItem("email");
+          let realPass = localStorage.getItem("password");
+          let email = $("#email").val();
+          let password = $("#password").val();
+          if (realEmail==email&&realPass==password) {
+            sessionStorage.setItem("email",email);
+            sessionStorage.setItem("password",password);
+            location.href="index.html";
+          }
+          else{
+            alert("Invalid Email or Password");
+          }
+        })
+       })
+    </script>
+    <script>
+      
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <center>
+        <div id="navigationBar">
+          <div
+            class="navigationBarPart"
+            style="font-family: 'Josefin Sans', sans-serif; font-size: 40px"
+          >
+            BharatAir
+          </div>
+          <div class="navigationBarPart">
+            <ul id="mainNavigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="booking.html">Book Ticket</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="navigationBarPart">
+            <button class="registerBtn" onclick="location.href='register.html'">
+            
+              <a href="register.html"> Register </a>
+            </button>
+
+            <button class="loginBtn">
+              <a href="login.html"> Login </a>
+            </button>
+          </div>
+        </div>
+      </center>
+    </nav>
+    <main>
+      <center>
+        <div id="login">
+          <h1 style="padding-top: 8%">Login</h1>
+          <div id="loginDetails">
+            <input placeholder="Email" type="email" id="email" />
+            <input placeholder="Password" type="password" id="password" />
+          </div>
+          
+          <button class="loginBtn" id="loginBtn2">Login</button>
+        </div>
+      </center>
+    </main>
+  </body>
+</html>

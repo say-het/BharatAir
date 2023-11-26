@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BharatAir</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Source+Sans+3:wght@600&display=swap"
+      rel="stylesheet"
+    /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script>
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          if (sessionStorage.getItem("email") != null) {
+            let registera = document.getElementById("registera");
+            registera.innerText = localStorage.getItem("email");
+            document.getElementsByClassName("loginBtn")[0].onclick = function () {
+              sessionStorage.removeItem("email");
+              sessionStorage.removeItem("password");
+              
+              location.reload();
+            };
+              document.getElementsByClassName("loginBtn")[0].innerHTML = "Logout";
+              document.getElementsByClassName("loginBtn")[0].style.cursor = "pointer";
+          }
+        },
+        false
+      );
+    </script>
+  </head>
+  <body>
+    <nav>
+      <center>
+        <div id="navigationBar">
+          <div
+            class="navigationBarPart"
+            style="font-family: 'Josefin Sans', sans-serif; font-size: 40px"
+          >
+            <a href="index.html" style="text-decoration: none; color: black">
+              BharatAir
+            </a>
+          </div>
+          <div class="navigationBarPart">
+            <ul id="mainNavigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="booking.html">Book Ticket</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="navigationBarPart">
+            <button class="registerBtn" onclick="location.href='register.html'">
+            
+              <a href="register.html" id="registera"> Register </a>
+            </button>
+            <button class="loginBtn">
+              <a
+                href="login.html"
+                id="logina"
+                style="text-decoration: none; color: black"
+              >
+                Login
+              </a>
+            </button>
+          </div>
+        </div>
+      </center>
+    </nav>
+    <main>
+      <div class="main">
+        <div id="mainHeading">
+          <p style="font-size: 72px; margin-bottom: 0px">Best Flight Deals</p>
+          <p style="font-size: 22px; margin-top: 2px">
+            Find the perfect flight for your next adventure.
+          </p>
+          <br />
+          <center>
+            <div id="mainButtons">
+              <button
+                class="registerBtn"
+                style="border-radius: 24px; padding-right: 5%; padding-left: 5%"
+                onclick="location.href='booking.html'"
+              >
+                Book Now
+              </button>
+              <button
+                class="registerBtn"
+                style="border-radius: 24px; padding-right: 5%; padding-left: 5%"
+                onclick="location.href='about.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </center>
+        </div>
+        <img
+          id="image1"
+          src="https://img.freepik.com/premium-vector/airplane-flight-route-world-map-linear-flight-aircraft-with-starting-points-traces-dash-line-flat-style-isolated-white-background-vector-illustration_517145-162.jpg?w=2000"
+          alt="image"
+        />
+
+        <div id="mainOne"></div>
+      </div>
+      <div style="margin: 30px 0 20px 100px;">
+        <h2>
+          Popular Routes
+        </h2>
+        <div style="display: flex;flex-direction: row;" id="popularRoutes">
+          <div><img src="https://i.guim.co.uk/img/media/26c17a15823f259d8e3e6ab581688ab636d6b711/0_0_3733_5600/master/3733.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=00a99ed63db0f12d1b8aeb8619253b92" alt="" style="border: 0px solid black;border-radius: 8px;height: 400px;width: 275px;margin-right: 50px;">
+            <p style="margin-top: 2%;font-size: larger;"><b>
+              Dubai
+            </b></p>
+            
+          </div>
+          <div><img src="https://c8.alamy.com/comp/2AB8170/aare-river-with-munster-cathedral-and-city-centre-in-background-bern-canton-bern-switzerland-europe-2AB8170.jpg" alt="" style="border: 0px solid black;border-radius: 8px;height: 400px;width: 275px;margin-right: 50px;">
+            <p style="margin-top: 2%;font-size: larger;"><b>Switzerland</b></p>
+          </div>
+          <div><img src="https://i.pinimg.com/736x/8c/2e/2e/8c2e2efda74767c89b036de2dd4e9dca.jpg" alt="" style="border: 0px solid black;border-radius: 8px;height: 400px;width: 275px;margin-right: 50px;">
+            <p style="margin-top: 2%;font-size: larger;"><b>New York</b></p>
+          </div>
+          <div><img src="https://c.stocksy.com/a/9Xl200/z9/659379.jpg" alt="" style="border: 0px solid black;border-radius: 8px;height: 400px;width: 275px;margin-right: 50px;">
+            
+            <p style="margin-top: 2%;font-size: larger;"><b>Greece</b></p>
+          </div>
+        </div>
+        <div style="display: flex;flex-direction: row;justify-content: space-around;margin-top: 5%;" id="benifits">
+          <div>
+            <span style="font-size: 96px;" class="material-symbols-outlined">
+              workspace_premium
+              </span>
+              <h3>Best Price Guarantee</h3>
+              <p>We offer only the best deals. If you find the same</p><p> flight cheaper elsewhere, contact us!</p>
+            </div>
+            <div >
+              <span style="font-size: 96px;" class="material-symbols-outlined">
+                credit_card
+              </span>
+              <h3>Easy Refunds & Cancellations</h3>
+              <p>Your flight got cancelled? We have you covered with <p><p> our instant refund services.</p>
+            </div>
+            <div>
+              <span style="font-size: 96px;" class="material-symbols-outlined">
+                medical_mask
+              </span>
+              <h3>Covid-19 Travel Information</h3>
+              <p>Stay Informed: Covid-19 Travel Restrictions</p>
+          </div>
+        </div>
+        <div style="background-image: url('https://www.webintravel.com/wp-content/uploads/2020/05/den-belitsky-GettyImages-854673918-scaled.jpg');color: black;background-size: cover;width: 1300px;height: 400px;border: 0px solid red;border-radius: 12px;">
+          <h1 style="padding-top: 120px;padding-left: 50px;padding-right: 0;">Get 10% Off with Our New Mobile App!</h1>
+          <h3 style="padding-bottom: 0px;padding-top: 30px;padding-left: 50px;">Download the BharatAir App and Manage Your Trips Effortlessly. </h3><p><h3 style="padding-left: 50px;"> Get Exclusive Deals and Extra Discounts!</h3>  </p>
+          <button style="margin-left: 50px;" class="registerBtn">Download Now</button>
+        </div>
+      </div>
+    </main>
+    <footer style="background-color: darkslategray;height: 100%;width: 100%;margin-top: 2%;">
+      <div style="margin: 50px 0 50px 0px;padding: 50px 0 50px 80px;">
+  
+        
+        <center>
+            <p id="footer">
+            
+            <a>Help and contacts &nbsp; | &nbsp; </a>
+            <a>Accessibility and site help &nbsp; | &nbsp; </a>
+            <a>Website security &nbsp; | &nbsp; </a>  
+            <a>Privacy policy &nbsp; | &nbsp; </a> 
+            <a>Legal &nbsp; | &nbsp; </a> 
+            <a>About BA &nbsp; | &nbsp; </a> 
+            <a>Media Centre &nbsp; | &nbsp; </a> 
+            <a>Customer Commitment &nbsp; | &nbsp; </a>
+          </p>
+          
+          <p style="color: white;text-decoration: none;">
+            <a >Careers &nbsp; | &nbsp; </a>
+            <a >Sustainability &nbsp; | &nbsp; </a> 
+            <a >Modern Slavery statement &nbsp; | &nbsp; </a>  
+            <a >Iberia.com</a>
+          </p>
+          <p id="footerImg">
+            <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png" alt=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png" alt=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png" alt=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" alt="">
+          </p>
+          <p style="color: white;">
+            © BharatAir -  all rights reserved
+          </p>
+          <img src="favicon.png" alt="" style="cursor: pointer;" onclick="location.href='index.html'">
+        </center>
+
+      </div>
+    </footer>
+  </body>
+</html>

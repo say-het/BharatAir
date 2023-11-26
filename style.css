@@ -1,0 +1,173 @@
+* {
+  outline: none;
+}
+#navigationBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav {
+  margin-top: 2.5%;
+}
+.navigationBarPart {
+  height: 150px;
+  display: inline-block;
+}
+body {
+  position: relative;
+}
+#mainNavigation li a {
+  text-decoration: none;
+  color: black;
+  padding: 0px 10px 0px 10px;
+  font-size: 18px;
+  transition: color 700ms;
+  transition: text-decoration-color 700ms;
+  text-decoration: underline 3px rgba(0, 0, 255, 0);
+}
+#mainNavigation li a:hover {
+  color: rgba(0, 0, 255, 1);
+  font-weight: bolder;
+  text-decoration-color: rgba(0, 0, 255, 1);
+}
+#login {
+  display: block;
+  text-align: center;
+  width: 500px;
+  height: 420px;
+  border: 0px solid black;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#loginDetails {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.loginBtn a {
+  text-decoration: none;
+  color: black;
+}
+.loginBtn {
+  transition-duration: 0.5s;
+  background-color: white;
+  border-radius: 5px;
+  width: 70px;
+  cursor: pointer;
+  padding: 10px;
+  border: 0px solid black;
+}
+.loginBtn:hover {
+  background-color: lightskyblue;
+}
+.registerBtn a {
+  text-decoration: none;
+  color: white;
+}
+.registerBtn {
+  color: white;
+  margin-right: 20px;
+  transition-duration: 0.5s;
+  background-color: blue;
+  border: 0px solid blue;
+  border-radius: 5px;
+
+  cursor: pointer;
+  padding: 10px;
+}
+.registerBtn:hover {
+  background-color: skyblue;
+  color: black;
+}
+.registerBtn a:hover {
+  color: black;
+}
+
+#loginDetails input {
+  margin: 3% 15% 9% 15%;
+  border: 0px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+#mainNavigation li {
+  display: inline;
+  list-style-type: none;
+}
+.main {
+  display: flex;
+  width: auto;
+  height: auto;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
+}
+#mainHeading {
+  padding: 0 3% 0 3%;
+  margin-left: 100px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 0px solid black;
+}
+#mainButtons {
+  margin-right: 2%;
+  margin-bottom: 10%;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
+}
+#mainOne {
+  display: block;
+}
+#image1 {
+  width: 40%;
+  float: right;
+  border: 0px solid black;
+  border-radius: 25px;
+}
+
+#bookingDetails {
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 40%;
+  padding: 5%;
+}
+#bookingDetails input {
+  margin: 3% 15% 0% 15%;
+  padding: 10px;
+  border: 0px solid black;
+  border-radius: 5px;
+}
+.ticket{
+  margin: 1% 0% 1% 0%;
+  background-color: white;
+  height: 20%;
+}
+#contactInfo {
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 40%;
+  padding: 5%;
+  margin-left: 80px;
+}
+#contactInfo input {
+  margin: 3% 10% 0% 10%;
+  padding: 10px;
+  border: 0px solid black;
+  border-radius: 5px;
+}
+#footer a{
+  color: white;text-decoration: none;
+  cursor: pointer;
+}
+#footer a:hover{
+  color: lightblue;text-decoration: none;
+}
+#footerImg img{
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
